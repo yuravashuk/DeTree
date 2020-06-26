@@ -55,7 +55,7 @@ struct TreeNode
 
     std::string Name;
     int Key;
-    DataTable InfoTable;
+   // DataTable InfoTable;
     std::vector<TCastType> WPs;
 
     TreeNode()

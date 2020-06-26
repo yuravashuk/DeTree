@@ -161,6 +161,7 @@
     <ClInclude Include="CSVReader.hpp" />
     <ClInclude Include="DotWritter.hpp" />
     <ClInclude Include="InputParser.hpp" />
+    <ClInclude Include="SharClf.hpp" />
     <ClInclude Include="Tree.hpp" />
     <ClInclude Include="TreeDataTypes.hpp" />
   </ItemGroup>
