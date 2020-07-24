@@ -36,8 +36,8 @@
     <ClInclude Include="TreeDataTypes.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="SharClf.hpp">
-      <Filter>Source Files</Filter>
-    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

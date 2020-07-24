@@ -4,7 +4,7 @@
 #include "Tree.hpp"
 #include "InputParser.hpp"
 #include "CSVReader.hpp"
-#include "SharClf.hpp"
+//#include "SharClf.hpp"
 
 void DumpDataTable(const CSVReader::TDataTable& inData)
 {
@@ -97,12 +97,12 @@ int main(int argc, char ** argv)
 
             if (algorithmNum == 1)
             {
-                TSigns signs;
-                TFunction function;
+              //  TSigns signs;
+              //  TFunction function;
 
-                ConvertDataTable(filename, signs, function);
-                ShafClf shaf(signs, function, 1);
-                shaf.Calculate();
+              //  ConvertDataTable(filename, signs, function);
+             //   ShafClf shaf(signs, function, 1);
+              //  shaf.Calculate();
             }
         }
     }

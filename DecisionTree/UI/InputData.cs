@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -34,7 +35,7 @@ namespace DecisionTree
 
         private void InputData_Resize(object sender, EventArgs e)
         {
-            dataGridView1.Height = this.Height - (menuBox.Height + 50);
+            dataGridView1.Height = this.Height - (menuBox.Height + 70);
             dataGridView1.Width = this.Width - 30;
         }
 
@@ -277,6 +278,194 @@ namespace DecisionTree
         {
             CreateDataTable();
             importer.SaveToHtml(dt, filepath);
+        }
+
+        private void loadDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            loadFromCsvButton_Click(sender, e);
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveToCsvButton_Click(sender, e);
+        }
+
+        private void resizeTableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ResizeTable form = new ResizeTable();
+            form.numColumns = dataGridView1.Columns.Count;
+            form.numRows = dataGridView1.Rows.Count - 1;
+            form.ShowDialog();
+
+            bool isColumsGrows = form.numColumns > dataGridView1.Columns.Count;
+            bool isRowsGrows = form.numRows > dataGridView1.Rows.Count;
+
+            if (isColumsGrows)
+            {
+                for (int i = dataGridView1.Columns.Count - 1; i < form.numColumns; i++)
+                {
+                    AddColumn();
+                }
+            } 
+            else
+            {
+                for (int i = dataGridView1.Columns.Count - 1; i > form.numColumns; i--)
+                {
+                    dataGridView1.Columns.RemoveAt(i);
+                }
+            }
+
+            if (isRowsGrows)
+            {
+                for (int i = dataGridView1.Rows.Count - 1; i < form.numRows; i++)
+                {
+                    dataGridView1.Rows.Add();
+                }
+            }
+            else
+            {
+                for (int i = dataGridView1.Rows.Count - 2; i > form.numRows - 1; i--)
+                {
+                    dataGridView1.Rows.RemoveAt(i);
+                }
+            }
+        }
+
+        private void dataValidationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string validationMessage = "Not valid elements: ";
+            bool isDirty = false;
+
+            for (int i = 0; i < dataGridView1.Columns.Count - 1; i++)
+            {
+                for (int j = 0; j < dataGridView1.Rows.Count - 1; j++)
+                {
+                    var item = dataGridView1[i, j];
+
+                    if (item != null)
+                    {
+                        try
+                        {
+                            var casted = item.Value as string;
+                            var value = int.Parse(casted);
+
+                            if (value != 0 && value != 1)
+                            {
+                                isDirty = true;
+                                validationMessage += $"not valid element at index ({i.ToString()},{j.ToString()})\n";
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            isDirty = true;
+                            validationMessage += $"not valid element at index ({i.ToString()},{j.ToString()})\n";
+                        }
+                    }
+                }
+            }
+
+            if (isDirty)
+            {
+                MessageBox.Show(validationMessage);
+            }
+            else
+            {
+                MessageBox.Show("Data is valid");
+            }
+        }
+
+        private static ImageCodecInfo GetEncoderInfo(String mimeType)
+        {
+            int j;
+            ImageCodecInfo[] encoders;
+            encoders = ImageCodecInfo.GetImageEncoders();
+            for (j = 0; j < encoders.Length; ++j)
+            {
+                if (encoders[j].MimeType == mimeType)
+                    return encoders[j];
+            }
+            return null;
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buildTreeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            buildTreeButton_Click_1(sender, e);
+        }
+
+        private void saveTreeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var treeImage = CoreAPI.SharedInstance.GetTreeImage();
+
+            if (treeImage != null)
+            {
+                SaveFileDialog dlg = new SaveFileDialog();
+                dlg.Filter = "Jpeg File (*.jpg)|*.jpg| All Files (*.*)|*.*";
+                dlg.Title = "Save Tree Image";
+
+                if (dlg.ShowDialog() == DialogResult.OK)
+                {
+                    string filepath = dlg.FileName;
+
+                    if (filepath.Length > 0)
+                    {
+                        ImageCodecInfo myImageCodecInfo;
+                        System.Drawing.Imaging.Encoder myEncoder;
+                        EncoderParameter myEncoderParameter;
+                        EncoderParameters myEncoderParameters;
+
+                        myImageCodecInfo = GetEncoderInfo("image/jpeg");
+                        myEncoder = System.Drawing.Imaging.Encoder.Quality;
+                        myEncoderParameters = new EncoderParameters(1);
+
+                        myEncoderParameter = new EncoderParameter(myEncoder, 100L);
+                        myEncoderParameters.Param[0] = myEncoderParameter;
+                        treeImage.Save(filepath, myImageCodecInfo, myEncoderParameters);
+                    }
+                }
+            }
+        }
+
+        private void saveReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!showReportButton.Enabled)
+            {
+                return;
+            }
+
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
+            dlg.Title = "Save Report";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string filepath = dlg.FileName;
+
+                if (filepath.Length > 0)
+                {
+                    File.WriteAllText(filepath, CoreAPI.SharedInstance.GetReport());
+                }
+            }
+        }
+
+        private void userManualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserManual userManual = new UserManual();
+            userManual.ShowDialog();
+        }
+
+        private void systemInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            About form = new About();
+            form.ShowDialog();
         }
     }
 }

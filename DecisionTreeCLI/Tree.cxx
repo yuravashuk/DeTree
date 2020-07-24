@@ -237,7 +237,7 @@ void DeTree::CalculateRecursivly(const DataTable& inTable, TreeNode* inNode, int
     inNode->Left = new TreeNode();
     inNode->Right = new TreeNode();
 
-   // inNode->InfoTable = inTable;
+    inNode->InfoTable = inTable;
     inNode->Left->Parent = inNode;
     inNode->Right->Parent = inNode;
     inNode->SetKey(inKeyIncrement);

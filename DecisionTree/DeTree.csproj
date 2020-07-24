@@ -73,6 +73,12 @@
   <ItemGroup>
     <Compile Include="Core\CoreAPI.cs" />
     <Compile Include="Core\DataTableUtils.cs" />
+    <Compile Include="UI\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\InputData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     <Compile Include="UI\ReportViewer.Designer.cs">
       <DependentUpon>ReportViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\ResizeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ResizeTable.Designer.cs">
+      <DependentUpon>ResizeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,12 @@
     <Compile Include="UI\TreeViewer.Designer.cs">
       <DependentUpon>TreeViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\UserManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserManual.Designer.cs">
+      <DependentUpon>UserManual.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -108,11 +126,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\InputData.resx">
       <DependentUpon>InputData.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ReportViewer.resx">
       <DependentUpon>ReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ResizeTable.resx">
+      <DependentUpon>ResizeTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
@@ -120,6 +144,10 @@
     <EmbeddedResource Include="UI\TreeViewer.resx">
       <DependentUpon>TreeViewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserManual.resx">
+      <DependentUpon>UserManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

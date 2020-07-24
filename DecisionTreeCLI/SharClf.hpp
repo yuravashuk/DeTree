@@ -5,7 +5,7 @@
 #define _SHAF_CLF_HPP_
 
 #include "TreeDataTypes.hpp"
-
+/*
 class ShafClf final
 {
 public:
@@ -48,5 +48,5 @@ private:
     TFunction mFunction;
     int mTypeOfDistanceInSpace;
 };
-
+*/
 #endif //_SHAF_CLF_HPP_

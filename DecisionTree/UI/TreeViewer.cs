@@ -99,7 +99,7 @@ namespace DecisionTree.UI
         {
             SaveFileDialog dlg = new SaveFileDialog();
             dlg.Filter = "Jpeg File (*.jpg)|*.jpg| All Files (*.*)|*.*";
-            dlg.Title = "Save Report";
+            dlg.Title = "Save Tree Image";
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 string filepath = dlg.FileName;

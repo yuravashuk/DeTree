@@ -161,9 +161,11 @@
     <ClInclude Include="CSVReader.hpp" />
     <ClInclude Include="DotWritter.hpp" />
     <ClInclude Include="InputParser.hpp" />
-    <ClInclude Include="SharClf.hpp" />
     <ClInclude Include="Tree.hpp" />
     <ClInclude Include="TreeDataTypes.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
