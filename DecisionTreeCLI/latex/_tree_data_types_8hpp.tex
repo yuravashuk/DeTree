@@ -1,0 +1,144 @@
+\doxysection{Tree\+Data\+Types.\+hpp File Reference}
+\label{_tree_data_types_8hpp}\index{TreeDataTypes.hpp@{TreeDataTypes.hpp}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+Include dependency graph for Tree\+Data\+Types.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \textbf{ Data\+Table}
+\item 
+struct \textbf{ Tree\+Node}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \textbf{ Data\+Utils}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \textbf{ \+\_\+\+T\+R\+E\+E\+\_\+\+D\+A\+T\+A\+\_\+\+T\+Y\+P\+E\+S\+\_\+\+H\+P\+P\+\_\+}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \textbf{ T\+Data\+Type} = int
+\item 
+using \textbf{ T\+Cast\+Type} = double
+\item 
+using \textbf{ T\+Sign} = std\+::vector$<$ \textbf{ T\+Data\+Type} $>$
+\item 
+using \textbf{ T\+Signs} = std\+::vector$<$ \textbf{ T\+Sign} $>$
+\item 
+using \textbf{ T\+Function} = \textbf{ T\+Sign}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\void \textbf{ Data\+Utils\+::\+Dump\+Vector} (const std\+::vector$<$ T $>$ \&in\+Vector, std\+::stringstream \&in\+Stream, const std\+::string \&title=\char`\"{}\char`\"{})
+\item 
+\textbf{ T\+Signs} \textbf{ Data\+Utils\+::\+Transpose} (const \textbf{ T\+Signs} \&in\+Data)
+\item 
+void \textbf{ Data\+Utils\+::\+Dump\+Table} (const \textbf{ Data\+Table} \&in\+Table, std\+::stringstream \&in\+Stream, const std\+::string \&in\+Title=\char`\"{}\char`\"{})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ T\+Data\+Type} \textbf{ g\+\_\+\+Positive\+Type} = 1
+\item 
+\textbf{ T\+Data\+Type} \textbf{ g\+\_\+\+Negative\+Type} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\label{_tree_data_types_8hpp_a83c29de63971849486ee45688a266d68}} 
+\index{TreeDataTypes.hpp@{TreeDataTypes.hpp}!\_TREE\_DATA\_TYPES\_HPP\_@{\_TREE\_DATA\_TYPES\_HPP\_}}
+\index{\_TREE\_DATA\_TYPES\_HPP\_@{\_TREE\_DATA\_TYPES\_HPP\_}!TreeDataTypes.hpp@{TreeDataTypes.hpp}}
+\doxysubsubsection{\_TREE\_DATA\_TYPES\_HPP\_}
+{\footnotesize\ttfamily \#define \+\_\+\+T\+R\+E\+E\+\_\+\+D\+A\+T\+A\+\_\+\+T\+Y\+P\+E\+S\+\_\+\+H\+P\+P\+\_\+}
+
+
+
+Definition at line 5 of file Tree\+Data\+Types.\+hpp.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\label{_tree_data_types_8hpp_ad5d1f9565c3b97a66b1a2f3f11d51baa}} 
+\index{TreeDataTypes.hpp@{TreeDataTypes.hpp}!TCastType@{TCastType}}
+\index{TCastType@{TCastType}!TreeDataTypes.hpp@{TreeDataTypes.hpp}}
+\doxysubsubsection{TCastType}
+{\footnotesize\ttfamily using \textbf{ T\+Cast\+Type} =  double}
+
+
+
+Definition at line 14 of file Tree\+Data\+Types.\+hpp.
+
+\mbox{\label{_tree_data_types_8hpp_adffd7e0e01afe8e2c910473b34e5cdea}} 
+\index{TreeDataTypes.hpp@{TreeDataTypes.hpp}!TDataType@{TDataType}}
+\index{TDataType@{TDataType}!TreeDataTypes.hpp@{TreeDataTypes.hpp}}
+\doxysubsubsection{TDataType}
+{\footnotesize\ttfamily using \textbf{ T\+Data\+Type} =  int}
+
+
+
+Definition at line 13 of file Tree\+Data\+Types.\+hpp.
+
+\mbox{\label{_tree_data_types_8hpp_a02118963c7a6e16745c8f1914fd338a1}} 
+\index{TreeDataTypes.hpp@{TreeDataTypes.hpp}!TFunction@{TFunction}}
+\index{TFunction@{TFunction}!TreeDataTypes.hpp@{TreeDataTypes.hpp}}
+\doxysubsubsection{TFunction}
+{\footnotesize\ttfamily using \textbf{ T\+Function} =  \textbf{ T\+Sign}}
+
+
+
+Definition at line 17 of file Tree\+Data\+Types.\+hpp.
+
+\mbox{\label{_tree_data_types_8hpp_aa9ce04fa15b6bdfbdddcb8f77d6e5407}} 
+\index{TreeDataTypes.hpp@{TreeDataTypes.hpp}!TSign@{TSign}}
+\index{TSign@{TSign}!TreeDataTypes.hpp@{TreeDataTypes.hpp}}
+\doxysubsubsection{TSign}
+{\footnotesize\ttfamily using \textbf{ T\+Sign} =  std\+::vector$<$ \textbf{ T\+Data\+Type} $>$}
+
+
+
+Definition at line 15 of file Tree\+Data\+Types.\+hpp.
+
+\mbox{\label{_tree_data_types_8hpp_a2434ac7d10508d0be217447d738aff87}} 
+\index{TreeDataTypes.hpp@{TreeDataTypes.hpp}!TSigns@{TSigns}}
+\index{TSigns@{TSigns}!TreeDataTypes.hpp@{TreeDataTypes.hpp}}
+\doxysubsubsection{TSigns}
+{\footnotesize\ttfamily using \textbf{ T\+Signs} =  std\+::vector$<$ \textbf{ T\+Sign} $>$}
+
+
+
+Definition at line 16 of file Tree\+Data\+Types.\+hpp.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\label{_tree_data_types_8hpp_ac85258fe8ce0c1694e822c7d09820e94}} 
+\index{TreeDataTypes.hpp@{TreeDataTypes.hpp}!g\_NegativeType@{g\_NegativeType}}
+\index{g\_NegativeType@{g\_NegativeType}!TreeDataTypes.hpp@{TreeDataTypes.hpp}}
+\doxysubsubsection{g\_NegativeType}
+{\footnotesize\ttfamily \textbf{ T\+Data\+Type} g\+\_\+\+Negative\+Type = 0\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 77 of file Tree\+Data\+Types.\+hpp.
+
+\mbox{\label{_tree_data_types_8hpp_a7927338cc746b6c0b5e44d2b95a7a0fd}} 
+\index{TreeDataTypes.hpp@{TreeDataTypes.hpp}!g\_PositiveType@{g\_PositiveType}}
+\index{g\_PositiveType@{g\_PositiveType}!TreeDataTypes.hpp@{TreeDataTypes.hpp}}
+\doxysubsubsection{g\_PositiveType}
+{\footnotesize\ttfamily \textbf{ T\+Data\+Type} g\+\_\+\+Positive\+Type = 1\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 76 of file Tree\+Data\+Types.\+hpp.
+

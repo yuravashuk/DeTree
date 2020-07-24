@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="DecisionTree.Core.CoreAPI" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAABgAAAAAAAQAAQAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\CoreAPI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DecisionTree.Core.DataTableUtils" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\DataTableUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DecisionTree.Program" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DecisionTree.InputData" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="2.25" />
+    <NestedTypes>
+      <Enum Name="DecisionTree.InputData.FileExtensions" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>UI\InputData.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>ACAAAAoJACACkACVAIGAAAJiIghkAAAAQAQAIAALAAE=</HashCode>
+      <FileName>UI\InputData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DecisionTree.Properties.Resources" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DecisionTree.Properties.Settings" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DecisionTree.UI.ReportViewer" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAADACAAACAAAACAAAACAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>UI\ReportViewer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DecisionTree.UI.SplashScreen" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAABAAAACAAAACAAAAIAAAAAAAAABAAAA=</HashCode>
+      <FileName>UI\SplashScreen.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DecisionTree.UI.TreeViewer" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAEAAQMCABAAAAQAiBAAACAQAAACABAAAAAQBAAEA=</HashCode>
+      <FileName>UI\TreeViewer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

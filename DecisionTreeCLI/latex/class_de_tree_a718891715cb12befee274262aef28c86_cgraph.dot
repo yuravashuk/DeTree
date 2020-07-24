@@ -1,0 +1,14 @@
+digraph "DeTree::BuildTree"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="DeTree::BuildTree",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="DataUtils::DumpTable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_data_utils.html#ac4d4797d7cad843eb1bc18bff6baa2ca",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="DataUtils::Transpose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_data_utils.html#a6c41c378698055a8eb78594e3a5bb161",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="DotWritter::Write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dot_writter.html#afce48d8f5bcf6a40339ee14cae0bd9c0",tooltip=" "];
+}

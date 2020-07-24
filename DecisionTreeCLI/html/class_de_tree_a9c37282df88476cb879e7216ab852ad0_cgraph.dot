@@ -1,0 +1,16 @@
+digraph "DeTree::SaveGraphReport"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="DeTree::SaveGraphReport",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="DeTree::BuildTree",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_de_tree.html#a718891715cb12befee274262aef28c86",tooltip=" "];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="DataUtils::DumpTable",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_data_utils.html#ac4d4797d7cad843eb1bc18bff6baa2ca",tooltip=" "];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="DataUtils::Transpose",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$namespace_data_utils.html#a6c41c378698055a8eb78594e3a5bb161",tooltip=" "];
+  Node2 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="DotWritter::Write",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_dot_writter.html#afce48d8f5bcf6a40339ee14cae0bd9c0",tooltip=" "];
+}
