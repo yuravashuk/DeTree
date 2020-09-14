@@ -50,5 +50,10 @@ namespace DecisionTree.Core
         {
             return File.ReadAllText("report.txt");
         }
+
+        public string GetDecompositionModel()
+        {
+            return File.ReadAllText("output-decomposition.txt");
+        }
     }
 }

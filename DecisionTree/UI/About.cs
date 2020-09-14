@@ -21,5 +21,10 @@ namespace DecisionTree.UI
         {
             this.Close();
         }
+
+        private void About_Load(object sender, EventArgs e)
+        {
+            versionLabel.Text = "Version: " + Application.ProductVersion;
+        }
     }
 }

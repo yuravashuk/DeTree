@@ -15,6 +15,11 @@ bool DeTree::BuildTree(const DataTable& inTable)
 
     if (mDotWritter.Write(mRootNode, "output.dot"))
     {
+        if (mDotWritter.WriteDecompositionModel("output-decomposition.txt"))
+        {
+            std::cout << "Done - Decomposition Model\n";
+        }
+
         // convert to PNG
         std::cout << "Convert to PNG.\n";
 

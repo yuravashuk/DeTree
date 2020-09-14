@@ -467,5 +467,16 @@ namespace DecisionTree
             About form = new About();
             form.ShowDialog();
         }
+
+        private void modelDecompositionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (!showReportButton.Enabled)
+            {
+                return;
+            }
+
+            ModelDecomposition modelDecomposition = new ModelDecomposition();
+            modelDecomposition.ShowDialog();
+        }
     }
 }

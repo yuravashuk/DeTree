@@ -87,6 +87,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\ModelDecomposition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ModelDecomposition.Designer.cs">
+      <DependentUpon>ModelDecomposition.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\ReportViewer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\InputData.resx">
       <DependentUpon>InputData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ModelDecomposition.resx">
+      <DependentUpon>ModelDecomposition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ReportViewer.resx">
       <DependentUpon>ReportViewer.cs</DependentUpon>

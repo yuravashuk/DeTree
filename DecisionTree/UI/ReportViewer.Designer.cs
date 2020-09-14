@@ -35,6 +35,7 @@
             // 
             // reportTextBox
             // 
+            this.reportTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.reportTextBox.Location = new System.Drawing.Point(8, 44);
             this.reportTextBox.Multiline = true;
             this.reportTextBox.Name = "reportTextBox";

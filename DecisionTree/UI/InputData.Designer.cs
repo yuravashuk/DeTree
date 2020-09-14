@@ -57,6 +57,8 @@
             this.userManualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.analyzisToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modelDecompositionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -197,6 +199,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.dataToolStripMenuItem,
+            this.analyzisToolStripMenuItem,
             this.reportToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -283,21 +286,21 @@
             // 
             this.buildTreeToolStripMenuItem.Name = "buildTreeToolStripMenuItem";
             this.buildTreeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.buildTreeToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.buildTreeToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
             this.buildTreeToolStripMenuItem.Text = "Build Tree";
             this.buildTreeToolStripMenuItem.Click += new System.EventHandler(this.buildTreeToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(243, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(242, 6);
             // 
             // saveTreeToolStripMenuItem
             // 
             this.saveTreeToolStripMenuItem.Name = "saveTreeToolStripMenuItem";
             this.saveTreeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.S)));
-            this.saveTreeToolStripMenuItem.Size = new System.Drawing.Size(246, 22);
+            this.saveTreeToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
             this.saveTreeToolStripMenuItem.Text = "Save Tree Structure";
             this.saveTreeToolStripMenuItem.Click += new System.EventHandler(this.saveTreeToolStripMenuItem_Click);
             // 
@@ -312,7 +315,7 @@
             // saveReportToolStripMenuItem
             // 
             this.saveReportToolStripMenuItem.Name = "saveReportToolStripMenuItem";
-            this.saveReportToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveReportToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.saveReportToolStripMenuItem.Text = "Save Report";
             this.saveReportToolStripMenuItem.Click += new System.EventHandler(this.saveReportToolStripMenuItem_Click);
             // 
@@ -330,7 +333,7 @@
             // 
             this.userManualToolStripMenuItem.Name = "userManualToolStripMenuItem";
             this.userManualToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.userManualToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.userManualToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.userManualToolStripMenuItem.Text = "User Manual";
             this.userManualToolStripMenuItem.Click += new System.EventHandler(this.userManualToolStripMenuItem_Click);
             // 
@@ -338,16 +341,31 @@
             // 
             this.systemInfoToolStripMenuItem.Name = "systemInfoToolStripMenuItem";
             this.systemInfoToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F2;
-            this.systemInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.systemInfoToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.systemInfoToolStripMenuItem.Text = "System Info";
             this.systemInfoToolStripMenuItem.Click += new System.EventHandler(this.systemInfoToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // analyzisToolStripMenuItem
+            // 
+            this.analyzisToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modelDecompositionToolStripMenuItem});
+            this.analyzisToolStripMenuItem.Name = "analyzisToolStripMenuItem";
+            this.analyzisToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.analyzisToolStripMenuItem.Text = "&Analysis";
+            // 
+            // modelDecompositionToolStripMenuItem
+            // 
+            this.modelDecompositionToolStripMenuItem.Name = "modelDecompositionToolStripMenuItem";
+            this.modelDecompositionToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.modelDecompositionToolStripMenuItem.Text = "&Model Decomposition ";
+            this.modelDecompositionToolStripMenuItem.Click += new System.EventHandler(this.modelDecompositionToolStripMenuItem_Click);
             // 
             // InputData
             // 
@@ -404,6 +422,8 @@
         private System.Windows.Forms.ToolStripMenuItem systemInfoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem analyzisToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modelDecompositionToolStripMenuItem;
     }
 }
 
